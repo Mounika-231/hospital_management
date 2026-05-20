@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- RECEPTIONIST -->
+    <record id="group_receptionist" model="res.groups">
+        <field name="name">Receptionist</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <!-- DOCTOR -->
+    <record id="group_doctor" model="res.groups">
+        <field name="name">Doctor</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <!-- ADMIN (optional custom group) -->
+    <record id="group_hospital_admin" model="res.groups">
+        <field name="name">Hospital Admin</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+</odoo>

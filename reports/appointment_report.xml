@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="appointment_slip_template">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="doc">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <h2 style="text-align:center;">CITY HOSPITAL</h2>
+                        <hr/>
+
+                        <h3 style="text-align:center;">Appointment Slip</h3>
+
+                        <br/>
+
+                        <table class="table table-bordered" style="width:100%;">
+
+                            <tr>
+                                <td><strong>Token Number</strong></td>
+                                <td><t t-esc="doc.token_number"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Patient Name</strong></td>
+                                <td><t t-esc="doc.patient_id.name"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Doctor Name</strong></td>
+                                <td><t t-esc="doc.doctor_id.name"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Appointment Date</strong></td>
+                                <td><t t-esc="doc.appointment_date"/></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Symptoms / Notes</strong></td>
+                                <td><t t-esc="doc.notes"/></td>
+                            </tr>
+
+                        </table>
+
+                        <br/><br/>
+
+                        <p style="text-align:center;">
+                            Thank you for visiting City Hospital.
+                        </p>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>

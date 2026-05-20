@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Receptionist -->
+    <record id="group_receptionist" model="res.groups">
+        <field name="name">Receptionist</field>
+    </record>
+
+    <!-- Doctor -->
+    <record id="group_doctor" model="res.groups">
+        <field name="name">Doctor</field>
+    </record>
+
+    <!-- Hospital Admin -->
+    <record id="group_hospital_admin" model="res.groups">
+        <field name="name">Hospital Admin</field>
+    </record>
+
+</odoo>

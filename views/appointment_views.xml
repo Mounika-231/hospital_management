@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="appointment_tree" model="ir.ui.view">
+
+        <field name="name">hospital.appointment.tree</field>
+        <field name="model">hospital.appointment</field>
+
+        <field name="arch" type="xml">
+
+            <tree>
+
+                <field name="name"/>
+                <field name="token_number"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="appointment_date"/>
+
+            </tree>
+
+        </field>
+
+    </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="appointment_form" model="ir.ui.view">
+
+        <field name="name">hospital.appointment.form</field>
+        <field name="model">hospital.appointment</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Appointment">
+
+                <!-- HEADER -->
+                <header>
+
+                    <button name="%(action_appointment_report)d"
+                            string="Print Slip"
+                            type="action"
+                            class="btn-primary"/>
+
+                </header>
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+
+                            <field name="name" readonly="1"/>
+                            <field name="token_number"/>
+                            <field name="patient_id"/>
+
+                        </group>
+
+                        <group>
+
+                            <field name="doctor_id"/>
+                            <field name="appointment_date"/>
+
+                        </group>
+
+                    </group>
+
+                    <group>
+
+                        <field name="notes"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <!-- ACTION -->
+    <record id="action_appointment"
+            model="ir.actions.act_window">
+
+        <field name="name">Appointments</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+
+
+    <!-- MENU -->
+    <menuitem
+        id="menu_appointment"
+        name="Appointments"
+        parent="hospital_root"
+        action="action_appointment"
+    />
+
+</odoo>

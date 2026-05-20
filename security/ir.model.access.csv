@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_patient_receptionist,hospital.patient receptionist,model_hospital_patient,hospital_management.group_receptionist,1,1,1,0
+access_patient_doctor,hospital.patient doctor,model_hospital_patient,hospital_management.group_doctor,1,1,0,0
+access_patient_admin,hospital.patient admin,model_hospital_patient,hospital_management.group_hospital_admin,1,1,1,1
+access_patient_problem_receptionist,hospital.patient.problem receptionist,model_hospital_patient_problem,hospital_management.group_receptionist,1,1,1,0
+access_patient_problem_doctor,hospital.patient.problem doctor,model_hospital_patient_problem,hospital_management.group_doctor,1,1,1,0
+access_patient_problem_admin,hospital.patient.problem admin,model_hospital_patient_problem,hospital_management.group_hospital_admin,1,1,1,1
+access_doctor_receptionist,hospital.doctor receptionist,model_hospital_doctor,hospital_management.group_receptionist,1,0,0,0
+access_doctor_doctor,hospital.doctor doctor,model_hospital_doctor,hospital_management.group_doctor,1,1,0,0
+access_doctor_admin,hospital.doctor admin,model_hospital_doctor,hospital_management.group_hospital_admin,1,1,1,1
+access_appointment_receptionist,hospital.appointment receptionist,model_hospital_appointment,hospital_management.group_receptionist,1,1,1,0
+access_appointment_doctor,hospital.appointment doctor,model_hospital_appointment,hospital_management.group_doctor,1,1,1,0
+access_appointment_admin,hospital.appointment admin,model_hospital_appointment,hospital_management.group_hospital_admin,1,1,1,1
+access_patient_report_wizard_receptionist,patient.report.wizard receptionist,model_patient_report_wizard,hospital_management.group_receptionist,1,1,1,0
+access_patient_report_wizard_doctor,patient.report.wizard doctor,model_patient_report_wizard,hospital_management.group_doctor,1,1,1,0
+access_patient_report_wizard_admin,patient.report.wizard admin,model_patient_report_wizard,hospital_management.group_hospital_admin,1,1,1,1
