@@ -11,47 +11,67 @@
 
                     <div class="page">
 
-                        <h2 style="text-align:center;">CITY HOSPITAL</h2>
+                        <h2 style="text-align:center;">
+                            CITY HOSPITAL
+                        </h2>
+
                         <hr/>
 
-                        <h3 style="text-align:center;">Appointment Slip</h3>
+                        <h3 style="text-align:center;">
+                            Appointment Slip
+                        </h3>
 
                         <br/>
 
-                        <table class="table table-bordered" style="width:100%;">
+                        <table class="table table-bordered"
+                               style="width:100%;">
 
                             <tr>
-                                <td><strong>Token Number</strong></td>
-                                <td><t t-esc="doc.token_number"/></td>
+                                <td>
+                                    <strong>Token Number</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="doc.token_number"/>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td><strong>Patient Name</strong></td>
-                                <td><t t-esc="doc.patient_id.name"/></td>
+                                <td>
+                                    <strong>Patient Name</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="doc.patient_id.name"/>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td><strong>Doctor Name</strong></td>
-                                <td><t t-esc="doc.doctor_id.name"/></td>
+                                <td>
+                                    <strong>Doctor Name</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="doc.doctor_id.name"/>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td><strong>Appointment Date</strong></td>
-                                <td><t t-esc="doc.appointment_date"/></td>
+                                <td>
+                                    <strong>Appointment Date</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="doc.appointment_date"/>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td><strong>Symptoms / Notes</strong></td>
-                                <td><t t-esc="doc.notes"/></td>
+                                <td>
+                                    <strong>Notes</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="doc.notes"/>
+                                </td>
                             </tr>
 
                         </table>
-
-                        <br/><br/>
-
-                        <p style="text-align:center;">
-                            Thank you for visiting City Hospital.
-                        </p>
 
                     </div>
 

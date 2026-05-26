@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="patient_contract_template">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="o">
+
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+
+                        <!-- ================= TITLE ================= -->
+
+                        <h2 style="text-align:center;">
+                            PATIENT CONTRACT REPORT
+                        </h2>
+
+                        <hr/>
+
+                        <!-- ================= PATIENT DETAILS ================= -->
+
+                        <h3>Patient Details</h3>
+
+                        <table class="table table-bordered" style="width:100%;">
+
+                            <tr>
+                                <td><strong>Patient Name</strong></td>
+                                <td>
+                                    <span t-esc="o.patient_id.name"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Problem</strong></td>
+                                <td>
+                                    <span t-esc="o.problem_name"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Start Date</strong></td>
+                                <td>
+                                    <span t-esc="o.start_date"/>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br/>
+
+                        <!-- ================= CLAIMS NOTES ================= -->
+
+                        <h3>Claims Notes</h3>
+
+                        <ul>
+
+                            <t t-foreach="(o.claim_notes or '').split('\n')" t-as="note">
+
+                                <t t-if="note">
+
+                                    <li>
+                                        <span t-esc="note"/>
+                                    </li>
+
+                                </t>
+
+                            </t>
+
+                            <t t-if="not o.claim_notes">
+
+                                <li>No claims available</li>
+
+                            </t>
+
+                        </ul>
+
+                        <br/>
+
+                        <!-- ================= BANK DETAILS ================= -->
+
+                        <h3>Bank Details</h3>
+
+                        <table class="table table-bordered" style="width:100%;">
+
+                            <tr>
+                                <td><strong>Bank Name</strong></td>
+                                <td>
+                                    <span t-esc="o.bank_name"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Account Number</strong></td>
+                                <td>
+                                    <span t-esc="o.account_number"/>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>IFSC Code</strong></td>
+                                <td>
+                                    <span t-esc="o.ifsc_code"/>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br/><br/>
+
+                        <!-- ================= SIGNATURE ================= -->
+
+                        <div style="text-align:right;">
+
+                            <t t-if="o.doctor_sign">
+
+                                <img t-att-src="image_data_uri(o.doctor_sign)"
+                                     style="max-height:120px; max-width:200px;"/>
+
+                            </t>
+
+                            <br/>
+
+                            <strong>Doctor Signature</strong>
+
+                        </div>
+
+                    </div>
+
+                </t>
+
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>
